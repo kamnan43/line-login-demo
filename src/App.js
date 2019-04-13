@@ -2,23 +2,21 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import Profile from './pages/Profile';
-import SendMessage from './pages/SendMessage';
-import LIFFWindow from './pages/LIFFWindow';
-import Header from './pages/components/Header';
+import Login from './pages/Login';
+import Auth from './pages/Auth';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
         <header className="app-header">
-          <h3 className="app-title">React LIFF Boilerplate</h3>
+          <h3 className="app-title">LINE Login Demo</h3>
         </header>
-        <Header />
         <Router>
           <div>
-            <Route exact path="/" component={Profile} />
-            <Route path="/message" component={SendMessage} />
-            <Route path="/window" component={LIFFWindow} />
+            <Route exact path="/" component={Login} />
+            <Route exact path="/auth" component={Auth} />
+            <Route exact path="/profile" component={Profile} />
           </div>
         </Router>
       </div>
